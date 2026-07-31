@@ -13,7 +13,7 @@ export class DecrementorComponent implements OnInit {
   /**
    * TODO: the CountService should be injected into this component as is done in the incrementor component.
    */
-  constructor() { }
+  constructor(private countService: CountService) { }
 
   ngOnInit(): void {
 
@@ -24,7 +24,8 @@ export class DecrementorComponent implements OnInit {
    * into this component, the service's decrementNum method should be called prior to emitting the decrementEvent,
    * just as has been done in the incrementor component.
    */
-  emitDecrementEvent() {
+  emitDecrementEvent(): void {
+this.countService.decrementNum();l
     this.decrementEvent.emit();
   }
 }

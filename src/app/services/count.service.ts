@@ -18,5 +18,6 @@ export class CountService {
    * TODO: write a service method that decrements num for use in the decrementor component.
    */
   decrementNum():void {
+    this.num--;
   }
 }
